@@ -30,8 +30,8 @@ public class RacingCar implements Comparable<RacingCar> {
 		return this.name.getName();
 	}
 
-	private boolean isThresholdExceeded(int criteria) {
-		return criteria >= THRESHOLD_MIN && criteria <= THRESHOLD_MAX;
+	private boolean isThresholdExceeded(int degree) {
+		return degree >= THRESHOLD_MIN && degree <= THRESHOLD_MAX;
 	}
 
 	private void moveForward() {
