@@ -6,6 +6,7 @@ import java.util.List;
 
 import game.exception.ExceptionMessages;
 import game.exception.InputInvalidException;
+import game.utils.ValidationUtil;
 
 public class RacingCars {
 	private final List<RacingCar> racingCars;
@@ -16,7 +17,7 @@ public class RacingCars {
 	}
 
 	private void namesEmptyValidationCheck(String names) {
-		if (names == null || names.length() == 0) {
+		if (ValidationUtil.isNotEmpty(names) == false) {
 			throw new InputInvalidException(ExceptionMessages.CAR_NAMES_INPUT_COUNT_EXCEPTION_MSG);
 		}
 	}
