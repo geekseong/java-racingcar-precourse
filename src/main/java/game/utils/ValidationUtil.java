@@ -1,6 +1,7 @@
 package game.utils;
 
 public class ValidationUtil {
+	public static final int EMPTY_LEN = 0;
 	public static final int LEN_MIN = 0;
 	public static final int LEN_MAX = 5;
 	public static final int NUM_RANGE_MIN = 0;
@@ -10,7 +11,7 @@ public class ValidationUtil {
 		if (str == null) {
 			return false;
 		}
-		return str.trim().length() != 0;
+		return str.trim().length() != EMPTY_LEN;
 	}
 
 	public static boolean isStrLenLessThan5(String str) {
