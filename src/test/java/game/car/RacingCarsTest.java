@@ -7,6 +7,8 @@ import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import game.exception.ExceptionMessages;
+import game.exception.InputInvalidException;
 import game.view.OutputView;
 
 public class RacingCarsTest {
@@ -16,6 +18,19 @@ public class RacingCarsTest {
 	@BeforeEach
 	public void setup() {
 		racingCars = new RacingCars("car1,car2,car3");
+	}
+
+	@Test
+	public void RacingCars_생성_실패_테스트() {
+		assertThatThrownBy(() -> {
+			new RacingCars("");
+		}).isInstanceOf(InputInvalidException.class)
+			.hasMessageContaining(ExceptionMessages.CAR_NAMES_INPUT_COUNT_EXCEPTION_MSG);
+
+		assertThatThrownBy(() -> {
+			new RacingCars(null);
+		}).isInstanceOf(InputInvalidException.class)
+			.hasMessageContaining(ExceptionMessages.CAR_NAMES_INPUT_COUNT_EXCEPTION_MSG);
 	}
 
 	@Test
@@ -35,5 +50,4 @@ public class RacingCarsTest {
 		String winnerView = OutputView.winners(racingCars.getWinners());
 		assertThat(winnerView).isEqualTo("car3가 최종 우승했습니다.");
 	}
-
 }

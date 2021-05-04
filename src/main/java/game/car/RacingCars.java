@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import game.exception.ExceptionMessages;
+import game.exception.InputInvalidException;
+
 public class RacingCars {
 	private final List<RacingCar> racingCars;
 
@@ -14,7 +17,7 @@ public class RacingCars {
 
 	private void namesEmptyValidationCheck(String names) {
 		if (names == null || names.length() == 0) {
-			throw new RuntimeException();
+			throw new InputInvalidException(ExceptionMessages.CAR_NAMES_INPUT_COUNT_EXCEPTION_MSG);
 		}
 	}
 
