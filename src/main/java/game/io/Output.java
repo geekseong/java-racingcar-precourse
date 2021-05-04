@@ -1,4 +1,4 @@
-package game.view;
+package game.io;
 
 public class Output {
 	public static void println(String msg) {

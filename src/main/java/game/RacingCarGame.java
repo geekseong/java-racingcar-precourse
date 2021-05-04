@@ -5,7 +5,7 @@ import java.util.List;
 import game.car.RacingCars;
 import game.utils.NumberGeneratorUtil;
 import game.view.InputView;
-import game.view.Output;
+import game.io.Output;
 import game.view.OutputView;
 
 public class RacingCarGame {

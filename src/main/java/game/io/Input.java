@@ -1,4 +1,4 @@
-package game.view;
+package game.io;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ import game.utils.ValidationUtil;
 
 public class Input {
 	private final static Scanner INPUT = new Scanner(System.in);
+
 	public static String readString() {
 		return INPUT.nextLine();
 	}

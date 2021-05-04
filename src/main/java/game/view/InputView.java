@@ -1,8 +1,7 @@
 package game.view;
 
-import java.util.Scanner;
-
-import game.utils.ValidationUtil;
+import game.io.Input;
+import game.io.Output;
 
 public class InputView {
 	private static final String CAR_NAME_INPUT_TEXT = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
