@@ -14,7 +14,7 @@ public class Input {
 	public static int readInt() {
 		String line = readString();
 		while (!ValidationUtil.isNumber(line)) {
-			System.out.println("숫자만 입력이 가능합니다.");
+			Output.println("숫자만 입력이 가능합니다.");
 			line = readString();
 		}
 
