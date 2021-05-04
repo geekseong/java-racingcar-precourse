@@ -37,7 +37,7 @@ public class ValidationUtilTest {
 	}
 
 	@Test
-	public void 숫자입력_검사() {
+	public void 숫자입력_유효성_검사() {
 		boolean strCase = ValidationUtil.isNumber("racing");
 		assertThat(strCase).isFalse();
 
