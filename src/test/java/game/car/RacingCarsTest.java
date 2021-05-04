@@ -19,7 +19,7 @@ public class RacingCarsTest {
 	}
 
 	@Test
-	public void 자동자_레이_결과_테스트() {
+	public void 자동자_레이싱_결과_테스트() {
 		racingCars.accelerate(Arrays.asList(1, 3, 4));
 		String outputView1 = OutputView.inTimeRacing(racingCars.getRacingCarList());
 		assertThat(outputView1).isEqualTo("car1: \ncar2: \ncar3: -\n");
