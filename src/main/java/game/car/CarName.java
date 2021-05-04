@@ -1,5 +1,7 @@
 package game.car;
 
+import game.exception.ExceptionMessages;
+import game.exception.InputInvalidException;
 import game.utils.ValidationUtil;
 
 public class CarName {
@@ -16,11 +18,11 @@ public class CarName {
 
 	private void carNameValidationCheck(String name) {
 		if (!ValidationUtil.isNotEmpty(name)) {
-			throw new RuntimeException();
+			throw new InputInvalidException(ExceptionMessages.CAR_NAME_INPUT_EMPTY_EXCEPTION_MSG);
 		}
 
 		if (!ValidationUtil.isStrLenLessThan5(name)) {
-			throw new RuntimeException();
+			throw new InputInvalidException(ExceptionMessages.CAR_NAME_INPUT_LENGTH_EXCEPTION_MSG);
 		}
 	}
 }
