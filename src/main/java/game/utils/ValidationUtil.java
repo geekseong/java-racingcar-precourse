@@ -1,4 +1,4 @@
-package game.validation;
+package game.utils;
 
 public class ValidationUtil {
 	public static final int LEN_MIN = 0;

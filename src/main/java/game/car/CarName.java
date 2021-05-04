@@ -1,6 +1,6 @@
 package game.car;
 
-import game.validation.ValidationUtil;
+import game.utils.ValidationUtil;
 
 public class CarName {
 	private String name;

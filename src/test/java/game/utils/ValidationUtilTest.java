@@ -1,4 +1,4 @@
-package game.validation;
+package game.utils;
 
 import static org.assertj.core.api.Assertions.*;
 
