@@ -17,7 +17,7 @@ public class CarNameTest {
 		"car, car",
 		"rcCar, rcCar",
 	})
-	public void CarName_생성_성공_태스트(final String name, final String expected) {
+	public void CarName_생성_성공_테스트(final String name, final String expected) {
 
 		CarName carName = new CarName(name);
 		assertThat(carName).isNotNull();

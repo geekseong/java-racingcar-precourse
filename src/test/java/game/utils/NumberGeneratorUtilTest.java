@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class NumberGeneratorUtilTest {
 
 	@Test
-	public void 숫자_생성기_검사() {
+	public void NumberGeneratorUtil_숫자_생성_테스트() {
 		List<Integer> generatedNumber = NumberGeneratorUtil.generateNumList(4);
 		assertThat(generatedNumber).isNotEmpty();
 		assertThat(generatedNumber.size()).isEqualTo(4);

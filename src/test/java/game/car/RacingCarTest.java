@@ -15,7 +15,7 @@ public class RacingCarTest {
 	}
 
 	@Test
-	public void 자동차_전진_검사() {
+	public void RacingCar_전진_테스트() {
 		racingCar.pushAcceleration(4);
 		racingCar.pushAcceleration(0);
 		racingCar.pushAcceleration(9);
