@@ -11,8 +11,8 @@ import game.view.OutputView;
 public class RacingCarGame {
 
 	public void start() {
-		String carNames = carNameInputRequest();
-		int racingTime = racingTimeInputRequest();
+		String carNames = InputView.carNameInputRequest();
+		int racingTime = InputView.racingTimeInputRequest();
 		RacingCars racingCars = new RacingCars(carNames);
 
 		int racingCarCount = racingCars.getCarCount();
@@ -23,18 +23,6 @@ public class RacingCarGame {
 		}
 
 		printWinner(racingCars);
-	}
-
-	private String carNameInputRequest() {
-		String view = OutputView.carNameInputRequest();
-		Output.println(view);
-		return InputView.readString();
-	}
-
-	private int racingTimeInputRequest() {
-		String view = OutputView.racingTimeInputRequest();
-		Output.println(view);
-		return InputView.readInt();
 	}
 
 	private void printInTimeResult(RacingCars racingCars) {
