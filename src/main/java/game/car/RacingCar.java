@@ -3,7 +3,6 @@ package game.car;
 public class RacingCar implements Comparable<RacingCar> {
 	private static final int THRESHOLD_MIN = 4;
 	private static final int THRESHOLD_MAX = 9;
-	private final String RACING_RESULT_TEMPLATE = "%s: %s";
 
 	private CarName name;
 	private CarPosition position;
@@ -19,12 +18,12 @@ public class RacingCar implements Comparable<RacingCar> {
 		}
 	}
 
-	public String getResult() {
-		return String.format(RACING_RESULT_TEMPLATE, this.name.getName(), this.position.getPositionToString());
-	}
-
 	public int getPosition() {
 		return this.position.getPosition();
+	}
+
+	public String getPositionToString() {
+		return this.position.getPositionToString();
 	}
 
 	public String getName() {

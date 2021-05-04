@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import game.view.OutputView;
+
 public class RacingCarTest {
 
 	private RacingCar racingCar;
@@ -21,7 +23,7 @@ public class RacingCarTest {
 		racingCar.pushAcceleration(9);
 		racingCar.pushAcceleration(3);
 
-		assertThat(racingCar.getResult()).isEqualTo("car: --");
+		assertThat(OutputView.racingCarCurrentPosition(racingCar)).isEqualTo("car: --");
 	}
 
 }
