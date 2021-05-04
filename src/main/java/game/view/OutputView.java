@@ -5,11 +5,11 @@ import java.util.List;
 import game.car.RacingCar;
 
 public class OutputView {
-	private static final String WINNER_TEXT = "%s가 최종 우승했습니다.";
-	private static final String RACING_RESULT_TEMPLATE = "%s: %s";
+	private static final String WINNER_TEMPLATE = "%s가 최종 우승했습니다.";
+	private static final String IN_TIME_RACING_RESULT_TEMPLATE = "%s: %s";
 
 	public static String racingCarCurrentPosition(RacingCar racingCar) {
-		return String.format(RACING_RESULT_TEMPLATE, racingCar.getName(), racingCar.getPositionToString());
+		return String.format(IN_TIME_RACING_RESULT_TEMPLATE, racingCar.getName(), racingCar.getPositionToString());
 	}
 
 	public static String inTimeRacing(List<RacingCar> racingCarList) {
@@ -28,6 +28,6 @@ public class OutputView {
 			resultBuilder.append(", " + racingCarList.get(i).getName());
 		}
 
-		return String.format(WINNER_TEXT, resultBuilder.toString());
+		return String.format(WINNER_TEMPLATE, resultBuilder.toString());
 	}
 }
