@@ -18,7 +18,6 @@ public class CarNameTest {
 		"rcCar, rcCar",
 	})
 	public void CarName_생성_성공_테스트(final String name, final String expected) {
-
 		CarName carName = new CarName(name);
 		assertThat(carName).isNotNull();
 		assertThat(carName.getName()).isEqualTo(expected);
@@ -27,7 +26,6 @@ public class CarNameTest {
 
 	@Test
 	public void CarName_공백_널_입력시_생성_실패_테스트() {
-
 		assertThatThrownBy(() -> {
 			new CarName("");
 		}).isInstanceOf(InputInvalidException.class)
@@ -41,7 +39,6 @@ public class CarNameTest {
 
 	@Test
 	public void CarName_다섯자_이상_입력시_생성_실패_테스트() {
-
 		assertThatThrownBy(() -> {
 			new CarName("racingCar");
 		}).isInstanceOf(InputInvalidException.class)
